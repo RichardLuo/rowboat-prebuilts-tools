@@ -16,9 +16,13 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+# Note: common/cglib 2.2 requires the old asm 3.3.x.
+
 LOCAL_PREBUILT_JAVA_LIBRARIES := \
+    asm-3-tools:asm-3.3.1$(COMMON_JAVA_PACKAGE_SUFFIX) \
     asm-tools:asm-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    asm-tree-tools:asm-tree-4.0$(COMMON_JAVA_PACKAGE_SUFFIX)
+    asm-tree-tools:asm-tree-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
+    asm-analysis-tools:asm-analysis-4.0$(COMMON_JAVA_PACKAGE_SUFFIX)
 
 LOCAL_MODULE_TAGS := optional
 
